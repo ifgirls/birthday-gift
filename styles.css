@@ -1,0 +1,166 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #5E5E5E;
+    -webkit-text-size-adjust: 100%;
+}
+
+.container {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    color: #FF9AA2;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+p {
+    color: #7A7A7A;
+    line-height: 1.6;
+}
+
+.subtitle {
+    color: #7A7A7A;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 20px;
+} 
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 100px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.btn-wish {
+    background-color: #F2BED1;
+    color: white;
+}
+
+.btn-memories {
+    background-color: #FFC1DA ;
+    color: white;
+}
+
+.btn-song {
+    background-color: #FDCEDF;
+    color: white;
+}
+
+.btn-hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #F8F8F8;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+.content h3 {
+    color: #FF9AA2;
+    margin-top: 0;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.memory-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1)
+}
+
+.spotify-container {
+    width: 100%;
+    margin: 15px auto;
+}
+
+.spotify-embed {
+    width: 100%;
+    height: 80px;
+    border-radius: 12px;
+}
+
+.note {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+
+@media (min-width: 400px) {
+    .btn {
+        font-size: 16px;
+        padding: 12px 5px;
+    }
+    
+    .memory-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 600px) {
+    .container {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .spotify-embed {
+        height: 380px;
+    }
+    
+    .buttons {
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+    }
+}
